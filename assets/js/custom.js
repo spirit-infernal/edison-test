@@ -3,10 +3,6 @@ $(document).ready(function() {
      entry.on('show.bs.collapse','.collapse', function() {
        entry.find('.collapse.show').collapse('hide');
      });
-
-    // $('#logForm #passwordField').on('blur', function(){
-    //     $('#logForm #submitE').attr('disabled', '');
-    // });
     $('#logForm #submitE').on('click', function(e) {
         e.preventDefault();
             var result = $.ajax({
@@ -17,38 +13,47 @@ $(document).ready(function() {
                     // $('#submitE').attr('disabled', 'disabled');
                 },
                 success: function (response, textStatus, jqXHR) {
-                    if (response === "success") {
-                        // window.attr('href','/');
-                    } else {
                         var alert = $('.alert-popup');
                             alert.text(response).css({'opacity':'1', 'top':'60px'});
+                    setTimeout(function(){
+                        location.reload();
+                    }, 1000);
                     }
-                }
             });
         return false;
     });
 
-
-    // $('#regForm #passwordFieldR2').on('blur', function(){
-    //     $('#regForm #submitR').attr('disabled', '');
+    // $('#regForm #submitR').on('click', function(e) {
+    //     e.preventDefault();
+    //     var result = $.ajax({
+    //             type: 'POST',
+    //             url: $('#regForm').attr('action'),
+    //             data: $('#regForm').serialize(),
+    //             beforeSend: function() {
+    //                 console.log($('#regForm').serialize());
+    //             },
+    //             success: function (response, textStatus, jqXHR) {
+    //                     var alert = $('.alert-popup');
+    //                         alert.text(response).css({'opacity':'1', 'top':'60px'});
+    //                 setTimeout(function(){
+    //                     location.reload();
+    //                 }, 1000);
+    //             }
+    //         });
+    //     return false;
     // });
 
-    $('#regForm #submitR').on('click', function(e) {
+    $('#logout').on('click', function(e) {
         e.preventDefault();
             var result = $.ajax({
                 type: 'POST',
-                url: $('#regForm').attr('action'),
-                data: $('#regForm').serialize(),
-                beforeSend: function() {
-                    // $('#submitR').attr('disabled', 'disabled');
-                },
+                url: 'assets/php/exit.php',
                 success: function (response, textStatus, jqXHR) {
-                    if (response === "success") {
-                        window.attr('href','/');
-                    } else {
                         var alert = $('.alert-popup');
                             alert.text(response).css({'opacity':'1', 'top':'60px'});
-                    }
+                    setTimeout(function(){
+                        location.reload();
+                    }, 1000);
                 }
             });
         return false;

@@ -5,6 +5,12 @@ header {
     height: 40px;
     position: relative;
 }
+
+header .rounded-circle {
+    height: 30px;
+    width: 30px;
+}
+
 .fixed-top {
     height: 40px;
     border-bottom: 3px solid rgba(0,0,0,.125);
