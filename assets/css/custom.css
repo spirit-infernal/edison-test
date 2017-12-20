@@ -1,0 +1,95 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+header {
+    height: 40px;
+    position: relative;
+}
+.fixed-top {
+    height: 40px;
+    border-bottom: 3px solid rgba(0,0,0,.125);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(40, 40, 40, 0.125);
+    -moz-box-shadow:    0px 5px 5px 0px rgba(40, 40, 40, 0.125);
+    box-shadow:         0px 5px 5px 0px rgba(40, 40, 40, 0.125);
+}
+.fixed-top p{
+    margin: 0;
+}
+main {
+    height: calc(100vh - 40px);
+}
+
+#main {
+    height: 100%;
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.enter-mode {
+    padding: 0;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 5px 5px 5px rgba(40, 40, 40, 0.125);
+    -moz-box-shadow:    0px 5px 5px 5px rgba(40, 40, 40, 0.125);
+    box-shadow:         0px 5px 5px 5px rgba(40, 40, 40, 0.125);
+}
+.enter-mode .card {
+    border: none;
+    border-radius: 0;
+}
+.enter-mode .card .card-header {
+    background-color: #1E824C;
+    color: #fff;
+    text-align: center;
+    border-radius: 0;
+}
+.enter-mode .collapse.show {
+    -webkit-box-shadow: inset 0px 5px 5px 0px rgba(40, 40, 40, 0.125);
+    -moz-box-shadow:    inset 0px 5px 5px 0px rgba(40, 40, 40, 0.125);
+    box-shadow:         inset 0px 5px 5px 0px rgba(40, 40, 40, 0.125);
+}
+.enter-mode .card .card-header a {
+    color: #fff;
+}
+.btn {
+    background: rgba(30, 130, 76, 0.5);
+    color: white;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.btn:hover, .btn:focus, .btn:active  {
+    background: rgba(30, 130, 76, 1);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(40, 40, 40, 0.25);
+    -moz-box-shadow:    0px 5px 5px 0px rgba(40, 40, 40, 0.25);
+    box-shadow:         0px 5px 5px 0px rgba(40, 40, 40, 0.25);
+}
+.enter-mode .form-control {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 2px solid rgba(30, 130, 76, 0.25);
+}
+.enter-mode .form-control:active, .enter-mode .form-control:focus {
+    border-bottom: 2px solid rgba(30, 130, 76, 1);
+}
+.alert-popup {
+    position: absolute;
+    right: 20px;
+    top: -100px;
+    display: block;
+    width: auto;
+    opacity: 0;
+    background-color: rgba(30, 130, 76, 1);
+    color: white;
+    padding: 1rem 2rem;
+    -webkit-box-shadow: 0px 5px 7px 0px rgba(40, 40, 40, 0.75);
+    -moz-box-shadow:    0px 5px 7px 0px rgba(40, 40, 40, 0.75);
+    box-shadow:         0px 5px 7px 0px rgba(40, 40, 40, 0.75);
+}
+.alert-popup p {
+    padding: 0;
+    margin: 0;
+}
